@@ -9,6 +9,32 @@
 <p>{{ 3.14159265359 | currency:"&euro;"}}</p>
 <p>{{ 3.14159265359 | currency:"&#8377;"}}</p>
 
+<input type="text" ng-model="string">
+
+<p><strong>Yelling: </strong>{{ string | uppercase }}</p>
+<p><i>Whispering: </i>{{ string | lowercase }}</p>
+
+<p>{{3.14159265359 | number:3}}</p>
+<p>{{3.14159265359 | number:6}}</p>
+<p>{{3.14159265359 | number:1}}</p>
+
+<select ng-model="digits" ng-init="digits='2'">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+</select>
+
+<p>Here you go, the first {{ digits }} 
+    <ng-pluralize count="digits" when="{ 
+            '1': 'digit of Pi', 
+            'other': 'digits of pi'}">
+    </ng-pluralize></p>
+
+<p>{{3.14159265359 | number:(digits)}}</p>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </body>
