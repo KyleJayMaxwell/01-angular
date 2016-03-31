@@ -36,6 +36,22 @@
 
 <p>{{3.14159265359 | number:(digits)}}</p>
 
+<h3>Useful Tip Calculator</h3>
+<p>How much did your meal cost?<input type="number" ng-model="cost"></p>
+<p>How much do you want to Tip?</p>
+<select ng-model="tip">
+  <option value=".1">10%</option>
+  <option value=".12">12%</option>
+  <option value=".15">15%</option>
+  <option value=".17">17%</option>
+  <option value=".2">20%</option>
+  <option value=".25">25%</option>
+</select>
+
+<p>Subtotal: {{ cost | currency}}</p>
+<p>Total: {{ cost + cost * tip | number:2 }}</p>
+
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </body>
 </html>
