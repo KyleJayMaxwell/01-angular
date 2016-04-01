@@ -131,7 +131,7 @@
 <div ng-repeat="camera in cameras | orderBy:sort"><h1>{{ camera.title }}</h1>
 <img src="{{camera.image}}">
 <p>Rating :{{camera.rating | number:1}}</p>
-<p ng-class='{yellow: {{camera.onSale}} == true}'>Price: {{camera.price | currency}}</p>
+<p ng-class='{yellow: {{camera.onSale}}}'>Price: {{camera.price | currency}}</p>
 </div>
 </div>
 
