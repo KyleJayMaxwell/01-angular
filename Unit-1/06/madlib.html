@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="madlib">
+<head>
+ <title></title>
+</head>
+</head>
+<body>
+
+<div ng-controller="form">
+<form ng-submit="body.complete = true">
+<p>Boy's Name: <input type="text" placeholder="Enter Boy's Name" ng-model="boy"></p>
+<p>Adjective: <input type="text" placeholder="Enter Adjective" ng-model="adj"></p>
+<p>Plural Noun: <input type="text" placeholder="Enter Plural Noun" ng-model="plural"></p>
+<p>Plural Noun 2: <input type="text" placeholder="Enter Plural Noun 2" ng-model="plural2"></p>
+<p>An insect, plural: <input type="text" placeholder="Enter an Insect, plural" ng-model="insect"></p>
+<p>Plural Noun 3: <input type="text" placeholder="Enter Plural Noun 3" ng-model="plural3"></p>
+<p>Verb ending in "s": <input type="text" placeholder="Enter verb ending in 's'" ng-model="verb"></p>
+<input type="submit">
+
+
+<h3 ng-show="body.complete">I'm in love with <span>{{ boy | uppercase }}</span>. He's so <span>{{ adj | uppercase }}</span>! He has big flat <span>{{ plural | uppercase }}</span>, and when our <span>{{ plural2 | uppercase }}</span> meet, I get <span>{{ insect | uppercase }}</span> in my stomach. I've fallen for him like a ton of <span>{{ plural3 | uppercase }}</span>, and he <span>{{ verb | uppercase }}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
+<input ng-show="body.complete" ng-click="body.complete = false" type="reset" value="play again?">
+</form>
+</div>
+
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
