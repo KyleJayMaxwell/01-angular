@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="firstApp">
+<head>
+  <title>Index</title>
+</head>
+<body>
+
+<div ng-controller="MyFirstController">
+  <p>inside scope</p>
+  <h1>My name is: {{name}}</h1>
+  <input ng-model="name" type="text" placeholder="What is your name">
+</div>
+<p>outside scope</p>
+  <h1>My name is: {{name}}</h1>
+  <input ng-model="name" type="text" placeholder="What is your name">
+
+<div ng-controller="ExercisesController">
+  <p>{{ FavColor }}</p>
+  <h3>{{ secondsInACentury | number }}</h3>
+  <p>{{ rightNow | date : "fullDate" }}</p>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
