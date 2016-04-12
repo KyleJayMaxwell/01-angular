@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="firstApp">
+<head>
+  <title>Index</title>
+</head>
+<body>
+
+  <div ng-controller="MyFirstController">
+
+    <h3>The number is: {{number}}</h3>
+    <button ng-click="pickRandomNumber()">Pick Random Number</button>
+
+    <div>
+      <legend>Word Reverser</legend>
+      <input type="text" ng-model="reverse" ng-init="reverse='Hello'"/>
+      <p>Your Word: {{ reverse }}</p>
+      <button ng-click="wordReverse(reverse)">Reverse!</button>
+    </div>
+
+    <div class="scoreboard">
+      <h2>Overall Serves: {{ overallScore }}</h2>
+      <h3>Player 1</h3>
+      <h5>{{ oneScore }}</h5>
+      <p ng-show="serveOne">Serve</p>
+      <button ng-click="addScore('one')">Add Point</button>
+      <h3>Player 2</h3>
+      <h5>{{ twoScore }}</h5>
+      <p ng-show="!serveOne">Serve</p>
+      <button ng-click="addScore('two')">Add Point</button>
+    </div>
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
